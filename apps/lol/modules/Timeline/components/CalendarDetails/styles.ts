@@ -51,7 +51,8 @@ export const CalendarDetailsContainer = styled.div<{
       display: flex;
       flex-direction: column;
 
-      & > * {
+      & > div,
+      & > h4 {
         margin-bottom: 0.5rem;
       }
 

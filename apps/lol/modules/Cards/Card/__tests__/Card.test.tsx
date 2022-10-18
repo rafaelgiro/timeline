@@ -1,7 +1,7 @@
 import { vi, describe, it } from "vitest";
-import { screen, render } from "~/test-utils";
+import { screen, render } from "../../../../test-utils";
 import userEvent from "@testing-library/user-event";
-import { data as mockData } from "../../../../../vitest/mocks";
+import { data as mockData } from "../../../../vitest/mocks";
 
 import { Card } from "../Card";
 

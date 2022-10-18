@@ -1,5 +1,5 @@
 import { describe, it } from "vitest";
-import { data as mockData } from "../../../../../vitest/mocks";
+import { data as mockData } from "../../../../vitest/mocks";
 import { getMinMaxDate } from "../../helpers";
 
 describe("getMinMaxDate", () => {

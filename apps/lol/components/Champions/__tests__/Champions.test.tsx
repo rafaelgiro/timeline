@@ -1,5 +1,5 @@
 import { describe, it } from "vitest";
-import { render, screen } from "~/test-utils";
+import { render, screen } from "../../../test-utils";
 import { Champions } from "../Champions";
 
 const champions: Champion[] = [

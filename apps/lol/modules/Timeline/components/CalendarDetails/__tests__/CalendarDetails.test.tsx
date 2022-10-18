@@ -1,6 +1,6 @@
 import { describe, it } from "vitest";
-import { render, screen } from "~/test-utils";
-import { data as mockData } from "../../../../../../vitest/mocks";
+import { render, screen } from "../../../../../test-utils";
+import { data as mockData } from "../../../../../vitest/mocks";
 import { CalendarDetails } from "../CalendarDetails";
 
 describe("<CalendarDetails />", () => {
@@ -12,7 +12,7 @@ describe("<CalendarDetails />", () => {
     expect(cardDate).toBeVisible();
   });
 
-  it("has a title", () => {
+  it.only("has a title", () => {
     render(<CalendarDetails category="udyr" {...mockData.udyr} />);
 
     const cardTitle = screen.getByRole("heading", { name: "UDYR" });

@@ -1,6 +1,6 @@
 import { describe, it, vi } from "vitest";
 import userEvent from "@testing-library/user-event";
-import { screen, render } from "~/test-utils";
+import { screen, render } from "../../../test-utils";
 
 import { TabGroup, TabContext } from "../TabGroup";
 import { Tab } from "../Tab";
@@ -16,7 +16,7 @@ describe("Tab", () => {
             priority: "primary",
           }}
         >
-          <Tab value="im-a-tab">I'm a tab!</Tab>
+          <Tab value="im-a-tab">I&apos;m a tab!</Tab>
         </TabContext.Provider>
       );
 
@@ -35,7 +35,7 @@ describe("Tab", () => {
             priority: "primary",
           }}
         >
-          <Tab value="im-a-tab">I'm a tab!</Tab>
+          <Tab value="im-a-tab">I&apos;m a tab!</Tab>
         </TabContext.Provider>
       );
 
@@ -54,7 +54,7 @@ describe("Tab", () => {
             priority: "primary",
           }}
         >
-          <Tab value="im-a-tab">I'm a tab!</Tab>
+          <Tab value="im-a-tab">I&apos;m a tab!</Tab>
         </TabContext.Provider>
       );
 
@@ -73,7 +73,7 @@ describe("Tab", () => {
             priority: "primary",
           }}
         >
-          <Tab value="im-a-tab">I'm a tab!</Tab>
+          <Tab value="im-a-tab">I&apos;m a tab!</Tab>
         </TabContext.Provider>
       );
 
@@ -96,7 +96,7 @@ describe("Tab", () => {
           }}
         >
           <Tab value="im-a-tab" isDisabled>
-            I'm a tab!
+            I&apos;m a tab!
           </Tab>
         </TabContext.Provider>
       );
@@ -118,8 +118,8 @@ describe("Tab", () => {
           currentlySelected="im-a-tab"
           aria-label="testing tab group"
         >
-          <Tab value="im-a-tab">I'm a tab!</Tab>
-          <Tab value="im-another-tab">I'm another tab!</Tab>
+          <Tab value="im-a-tab">I&apos;m a tab!</Tab>
+          <Tab value="im-another-tab">I&apos;m another tab!</Tab>
         </TabGroup>
       );
 
@@ -132,8 +132,8 @@ describe("Tab", () => {
     it("renders multiple tabs", () => {
       render(
         <TabGroup onChange={vi.fn()} currentlySelected="im-a-tab">
-          <Tab value="im-a-tab">I'm a tab!</Tab>
-          <Tab value="im-another-tab">I'm another tab!</Tab>
+          <Tab value="im-a-tab">I&apos;m a tab!</Tab>
+          <Tab value="im-another-tab">I&apos;m another tab!</Tab>
         </TabGroup>
       );
 
@@ -144,8 +144,8 @@ describe("Tab", () => {
     it("runs selects only one tab at a time", () => {
       render(
         <TabGroup onChange={vi.fn()} currentlySelected="im-a-tab">
-          <Tab value="im-a-tab">I'm a tab!</Tab>
-          <Tab value="im-another-tab">I'm another tab!</Tab>
+          <Tab value="im-a-tab">I&apos;m a tab!</Tab>
+          <Tab value="im-another-tab">I&apos;m another tab!</Tab>
         </TabGroup>
       );
 
@@ -156,8 +156,8 @@ describe("Tab", () => {
     it("has only one active tab selector", () => {
       render(
         <TabGroup onChange={vi.fn()} currentlySelected="im-a-tab">
-          <Tab value="im-a-tab">I'm a tab!</Tab>
-          <Tab value="im-another-tab">I'm another tab!</Tab>
+          <Tab value="im-a-tab">I&apos;m a tab!</Tab>
+          <Tab value="im-another-tab">I&apos;m another tab!</Tab>
         </TabGroup>
       );
 

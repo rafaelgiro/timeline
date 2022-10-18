@@ -1,6 +1,6 @@
 import { describe, it, vi } from "vitest";
 import userEvent from "@testing-library/user-event";
-import { screen, render } from "~/test-utils";
+import { screen, render } from "../../../test-utils";
 import { Checkbox } from "../Checkbox";
 
 describe("<Checkbox />", () => {

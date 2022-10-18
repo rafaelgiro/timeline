@@ -1,12 +1,12 @@
 import { describe, it, vi } from "vitest";
 import userEvent from "@testing-library/user-event";
-import { screen, render } from "~/test-utils";
 import { CalendarEvent } from "../CalendarEvent";
-import { data as mockData } from "../../../../../../vitest/mocks";
+import { screen, render } from "../../../../../test-utils";
+import { data as mockData } from "../../../../../vitest/mocks";
 
 describe("<CalendarEvent />", () => {
   describe("General CalendarEvent Component", () => {
-    it("renders the event title", () => {
+    it("renders the event title", async () => {
       render(
         <CalendarEvent
           firstDate={new Date()}
@@ -16,11 +16,11 @@ describe("<CalendarEvent />", () => {
         />
       );
 
-      const title = screen.getByText("Udyr");
+      const title = await screen.findByRole("heading", { name: "Udyr" });
       expect(title).toBeVisible();
     });
 
-    it("renders champion's portraits", () => {
+    it("renders champion's portraits", async () => {
       render(
         <CalendarEvent
           firstDate={new Date()}
@@ -30,11 +30,11 @@ describe("<CalendarEvent />", () => {
         />
       );
 
-      const championPortrait = screen.getByAltText("Udyr");
-      expect(championPortrait).toBeVisible();
+      const championPortrait = await screen.findAllByAltText("Udyr");
+      expect(championPortrait).toHaveLength(2);
     });
 
-    it("renders a small frame for events that are less than 3 days long", () => {
+    it("renders a small frame for events that are less than 3 days long", async () => {
       render(
         <CalendarEvent
           firstDate={new Date()}
@@ -44,11 +44,11 @@ describe("<CalendarEvent />", () => {
         />
       );
 
-      const frame = screen.getByTestId("small-frame");
+      const frame = await screen.findByTestId("small-frame");
       expect(frame).toBeVisible();
     });
 
-    it("renders a medium frame for events that are less than 14 days long", () => {
+    it("renders a medium frame for events that are less than 14 days long", async () => {
       render(
         <CalendarEvent
           firstDate={new Date()}
@@ -58,11 +58,11 @@ describe("<CalendarEvent />", () => {
         />
       );
 
-      const frame = screen.getByTestId("medium-frame");
+      const frame = await screen.findByTestId("medium-frame");
       expect(frame).toBeVisible();
     });
 
-    it("renders a large frame for events that are more than 8 days long", () => {
+    it("renders a large frame for events that are more than 8 days long", async () => {
       render(
         <CalendarEvent
           firstDate={new Date()}
@@ -72,7 +72,7 @@ describe("<CalendarEvent />", () => {
         />
       );
 
-      const frame = screen.getByTestId("large-frame");
+      const frame = await screen.findByTestId("large-frame");
       expect(frame).toBeVisible();
     });
 
@@ -81,7 +81,7 @@ describe("<CalendarEvent />", () => {
   });
 
   describe("<CalendarExtenalEvent />", () => {
-    it("has a external url", () => {
+    it("has a external url", async () => {
       render(
         <CalendarEvent
           firstDate={new Date()}
@@ -91,7 +91,7 @@ describe("<CalendarEvent />", () => {
         />
       );
 
-      const calendarEvent = screen.getByRole("link", {
+      const calendarEvent = await screen.findByRole("link", {
         name: /Gameplay trailer/gi,
       });
 
@@ -115,7 +115,7 @@ describe("<CalendarEvent />", () => {
         />
       );
 
-      const calendarEvent = screen.getByRole("button", {
+      const calendarEvent = await screen.findByRole("button", {
         name: /Udyr/gi,
       });
       await user.click(calendarEvent);

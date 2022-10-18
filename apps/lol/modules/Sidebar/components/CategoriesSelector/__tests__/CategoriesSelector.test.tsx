@@ -1,6 +1,6 @@
 import userEvent from "@testing-library/user-event";
 import { describe, it, vi } from "vitest";
-import { screen, render } from "~/test-utils";
+import { screen, render } from "../../../../../test-utils";
 
 import {
   CategoriesSelector,
