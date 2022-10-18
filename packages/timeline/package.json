@@ -1,0 +1,26 @@
+{
+  "name": "@5pots/timeline",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@popperjs/core": "^2.11.6",
+    "react-indiana-drag-scroll": "^2.2.0",
+    "react-popper": "^2.3.0"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^8.19.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/react": "18.0.17",
+    "@vitejs/plugin-react": "^2.1.0",
+    "typescript": "^4.5.3",
+    "vite-tsconfig-paths": "^3.5.1",
+    "vitest": "^0.24.3"
+  }
+}

@@ -1,10 +1,10 @@
 import React, { type FC, type ReactElement } from "react";
 import { render, type RenderOptions } from "@testing-library/react";
 
-import { ThemeProvider } from "./contexts/Theme";
+import { ThemeProvider } from "@5pots/timeline/contexts/Theme";
 
 const AllTheProviders: FC<{ children: React.ReactNode }> = ({ children }) => {
-  return <ThemeProvider>{children}</ThemeProvider>;
+  return <ThemeProvider color={{}}>{children}</ThemeProvider>;
 };
 
 /**

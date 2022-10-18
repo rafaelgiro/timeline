@@ -1,5 +1,5 @@
-// const withTM = require("next-transpile-modules")(["ui"]);
+const withTM = require("next-transpile-modules")(["@5pots/timeline"]);
 
-// module.exports = withTM({
-//   reactStrictMode: true,
-// });
+module.exports = withTM({
+  reactStrictMode: true,
+});
