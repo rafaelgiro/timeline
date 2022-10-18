@@ -6,14 +6,15 @@ import { Background, CalendarWrapper } from "../modules/Timeline";
 import { Wrapper } from "../modules/Wrapper/Wrapper";
 import { ThemeProvider } from "../contexts/Theme";
 
+import { color } from "../utils/color";
 import { data } from "../data";
 
 export default function Web() {
   return (
-    <ThemeProvider>
+    <ThemeProvider color={color}>
       <Wrapper>
         <Head>
-          <title>5Pots</title>
+          <title>5Pots - LoL</title>
           <meta charSet="utf-8" />
           <meta
             name="viewport"

@@ -11,19 +11,6 @@ const breakpoints = {
 };
 
 const theme = {
-  color: {
-    backgroundPrimary: "#141529",
-    backgroundSecondary: "#242537",
-    fontPrimary: "#F2E9ED",
-    border: "rgba(242, 233, 237, 0.15)",
-    highlight: "#F218B4",
-    skins: "#F86BC2",
-    changes: "#FEA8B1",
-    champions: "#FDFD9B",
-    pbe: "#3BDDF9",
-    release: "#51FC90",
-    rumor: "#F2E9ED",
-  },
   screens: {
     xs: `only screen and (min-width: ${breakpoints.xs}px)`,
     sm: `only screen and (min-width: ${breakpoints.sm}px)`,
@@ -50,7 +37,7 @@ const theme = {
  * ```
  */
 export const ThemeProvider = (props: ThemeProviderProps) => {
-  const { children } = props;
+  const { children, color } = props;
 
   return (
     <>
@@ -64,7 +51,7 @@ export const ThemeProvider = (props: ThemeProviderProps) => {
             height: 100%;
           }
           body {
-            background-color: ${theme.color.backgroundPrimary};
+            background-color: ${color.backgroundPrimary};
             font-family: "Quicksand", sans-serif;
             font-weight: 300;
             strong {
@@ -88,7 +75,7 @@ export const ThemeProvider = (props: ThemeProviderProps) => {
           }
         `}
       />
-      <EmotionProvider theme={theme}>{children}</EmotionProvider>
+      <EmotionProvider theme={{ ...theme, color }}>{children}</EmotionProvider>
     </>
   );
 };
@@ -98,4 +85,8 @@ interface ThemeProviderProps {
    * The entire App Component
    */
   children: React.ReactNode;
+  /**
+   * App's theme colors
+   */
+  color: ThemeColors;
 }
