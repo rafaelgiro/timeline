@@ -36,7 +36,6 @@ export const CalendarWrapper = styled(ScrollContainer)<CalendarWrapperProps>`
   margin-top: 1.5rem;
   margin-left: 1rem;
   position: relative;
-  grid-auto-rows: 5rem;
   padding: 3.25rem 1rem 0 1rem;
 
   @media ${({ theme }) => theme.screens.lg} {

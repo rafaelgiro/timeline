@@ -4,7 +4,7 @@ import { CalendarSimpleEvent } from "../CalendarSimpleEvent";
 import { screen, render } from "../../../../../test-utils";
 import { data as mockData } from "../../../../../vitest/mocks";
 
-describe.skip("<CalendarSimpleEvent />", () => {
+describe("<CalendarSimpleEvent />", () => {
   it("should render a line though the calendar", () => {
     render(
       <CalendarSimpleEvent

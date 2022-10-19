@@ -55,6 +55,13 @@ export const CalendarEventContainer = styled.div<CalendarEventContainerProps>`
 
 export const CalendarEventPosition = styled.div<CalendarEventPositionProps>`
   margin: 1rem 1rem;
+  position: relative;
+
+  ${({ isSimpleEvent }) =>
+    isSimpleEvent &&
+    css`
+      margin: 0.25rem 1rem;
+    `}
 
   grid-column: ${({ distanceFromStart }) => distanceFromStart + 1} / span
     ${({ sizeInDays }) => sizeInDays + 1};
@@ -169,4 +176,8 @@ interface CalendarEventPositionProps {
    * Link `rel` attribute.
    */
   rel?: string;
+  /**
+   * If true, the event has less margin.
+   */
+  isSimpleEvent: boolean;
 }

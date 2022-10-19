@@ -15,6 +15,7 @@ export const CalendarEventWrapper = (props: CalendarEventWrapperProps) => {
     onEventClick,
     distanceFromStart,
     sizeInDays,
+    variant,
   } = props;
 
   const htmlTag = url ? "a" : "button";
@@ -30,6 +31,7 @@ export const CalendarEventWrapper = (props: CalendarEventWrapperProps) => {
       target={url ? "_blank" : undefined}
       rel={url ? "noreferrer" : undefined}
       onClick={subEvents ? () => onEventClick(category) : undefined}
+      isSimpleEvent={variant === "dashed" || variant === "dotted"}
     >
       {children}
     </CalendarEventPosition>

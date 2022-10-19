@@ -31,6 +31,7 @@ export const CalendarContainer = styled.section`
   padding: 0.25rem;
   grid-row: 2/3;
   height: 50vh;
+  overflow: hidden;
 
   .indiana-scroll-container {
     height: 50vh;

@@ -1,6 +1,7 @@
 import { forwardRef, useMemo } from "react";
 
 import { CalendarEvent } from "../CalendarEvent";
+import { CalendarSimpleEvent } from "../CalendarSimpleEvent";
 import { Day } from "./Day";
 
 import { getDatesBetween } from "./helpers";
@@ -36,6 +37,18 @@ export const Calendar = forwardRef<HTMLDivElement, CalendarProps>(
         </div>
         {categories.map((cat) => {
           const eventData = data[cat];
+
+          if (eventData.variant === "dashed" || eventData.variant === "dotted")
+            return (
+              <CalendarSimpleEvent
+                firstDate={from}
+                key={eventData.description}
+                category={cat}
+                onEventClick={handleCardClick}
+                {...data[cat]}
+              />
+            );
+
           return (
             <CalendarEvent
               firstDate={from}
