@@ -12,10 +12,10 @@ export const data: Record<string, TimelineEvent> = {
   changes,
   bewitching,
   malzahar,
+  ksante,
+  empyrean,
   patch,
   skins,
-  empyrean,
-  ksante,
-  worlds,
   pass,
+  worlds,
 };

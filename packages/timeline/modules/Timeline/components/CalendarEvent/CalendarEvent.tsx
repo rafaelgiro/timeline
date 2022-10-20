@@ -6,7 +6,7 @@ import { Typography } from "../../../../components/Typography";
 import { CalendarDetails } from "../CalendarDetails/CalendarDetails";
 import { CalendarEventFrame } from "./CalendarEventFrame";
 import { CalendarEventWrapper } from "./CalendarEventWrapper";
-import { debounce, getDaysBetweenDates } from "./helpers";
+import { debounce, getDaysBetweenDates, getOverlappingDates } from "./helpers";
 import { CalendarEventContainer, Overlay, Tooltip } from "./styles";
 
 /**
@@ -21,6 +21,7 @@ export const CalendarEvent = (props: CalendarEventProps) => {
     backgroundCategory,
     borderCategory,
     firstDate,
+    previousEventsEndDates,
   } = props;
   const championsRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -42,6 +43,7 @@ export const CalendarEvent = (props: CalendarEventProps) => {
 
   const sizeInDays = getDaysBetweenDates(startDate, endDate);
   const distanceFromStart = getDaysBetweenDates(firstDate, startDate);
+  const lineToRender = getOverlappingDates(previousEventsEndDates, startDate);
 
   useEffect(() => {
     const championsWidth = championsRef.current?.clientWidth || 0;
@@ -56,6 +58,7 @@ export const CalendarEvent = (props: CalendarEventProps) => {
         {...props}
         distanceFromStart={distanceFromStart}
         sizeInDays={sizeInDays}
+        lineToRender={lineToRender}
       >
         <CalendarEventContainer
           championsWidth={stickyComponentsWidth.champions}
@@ -112,4 +115,8 @@ export interface CalendarEventProps extends TimelineEvent {
    * First date of the timeline
    */
   firstDate: Date;
+  /**
+   * Previous events dates
+   */
+  previousEventsEndDates: Date[];
 }

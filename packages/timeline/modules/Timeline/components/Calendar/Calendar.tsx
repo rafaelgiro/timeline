@@ -15,6 +15,10 @@ export const Calendar = forwardRef<HTMLDivElement, CalendarProps>(
   (props, ref) => {
     const { from, to, data } = props;
     const days = useMemo(() => getDatesBetween(from, to), [from, to]);
+    const allEndDates = useMemo(
+      () => Object.values(data).map((event) => event.endDate),
+      [data]
+    );
 
     const categories = Object.keys(data);
 
@@ -35,8 +39,9 @@ export const Calendar = forwardRef<HTMLDivElement, CalendarProps>(
             );
           })}
         </div>
-        {categories.map((cat) => {
+        {categories.map((cat, i) => {
           const eventData = data[cat];
+          const previousEventsEndDates = allEndDates.slice(0, i);
 
           if (eventData.variant === "dashed" || eventData.variant === "dotted")
             return (
@@ -45,6 +50,7 @@ export const Calendar = forwardRef<HTMLDivElement, CalendarProps>(
                 key={eventData.description}
                 category={cat}
                 onEventClick={handleCardClick}
+                previousEventsEndDates={previousEventsEndDates}
                 {...data[cat]}
               />
             );
@@ -55,6 +61,7 @@ export const Calendar = forwardRef<HTMLDivElement, CalendarProps>(
               key={eventData.description}
               category={cat}
               onEventClick={handleCardClick}
+              previousEventsEndDates={previousEventsEndDates}
               {...data[cat]}
             />
           );

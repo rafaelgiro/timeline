@@ -117,3 +117,32 @@ export function debounce<F extends (...args: Parameters<F>) => ReturnType<F>>(
     timeout = setTimeout(() => func(...args), waitFor);
   };
 }
+
+/**
+ * Check if the current event will overlap with the previous one.
+ *
+ * @param startDate the start date of the event
+ * @param endDate the end date of the last event
+ * @returns if the events will overlap
+ */
+export function willDatesOverlap(startDate: Date, endDate: Date) {
+  return endDate.getTime() >= startDate.getTime();
+}
+
+/**
+ * Get a dates array as a parameter and check the
+ * number of dates that a date will overlap with the previous ones.
+ *
+ * @param dates all previous dates
+ * @param currentDate current event stard date
+ * @returns line that the event will be drawn
+ */
+export function getOverlappingDates(dates: Date[], currentDate: Date): number {
+  let overlappingDates = 0;
+
+  dates.forEach((date) => {
+    if (willDatesOverlap(currentDate, date)) overlappingDates++;
+  });
+
+  return overlappingDates;
+}

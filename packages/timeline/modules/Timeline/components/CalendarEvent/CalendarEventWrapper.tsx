@@ -16,6 +16,7 @@ export const CalendarEventWrapper = (props: CalendarEventWrapperProps) => {
     distanceFromStart,
     sizeInDays,
     variant,
+    lineToRender,
   } = props;
 
   const htmlTag = url ? "a" : "button";
@@ -32,6 +33,7 @@ export const CalendarEventWrapper = (props: CalendarEventWrapperProps) => {
       rel={url ? "noreferrer" : undefined}
       onClick={subEvents ? () => onEventClick(category) : undefined}
       isSimpleEvent={variant === "dashed" || variant === "dotted"}
+      lineToRender={lineToRender}
     >
       {children}
     </CalendarEventPosition>
@@ -51,4 +53,8 @@ interface CalendarEventWrapperProps extends CalendarEventProps {
    * Number of days/columns the event will take.
    */
   sizeInDays: number;
+  /**
+   * In wich line the event will be rendered
+   */
+  lineToRender: number;
 }

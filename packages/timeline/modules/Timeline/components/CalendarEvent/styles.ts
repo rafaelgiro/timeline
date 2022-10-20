@@ -65,6 +65,7 @@ export const CalendarEventPosition = styled.div<CalendarEventPositionProps>`
 
   grid-column: ${({ distanceFromStart }) => distanceFromStart + 1} / span
     ${({ sizeInDays }) => sizeInDays + 1};
+  grid-row: ${({ lineToRender }) => lineToRender + 1};
 `;
 
 export const CalendarEventFrameContainer = styled.svg`
@@ -180,4 +181,8 @@ interface CalendarEventPositionProps {
    * If true, the event has less margin.
    */
   isSimpleEvent: boolean;
+  /**
+   * In wich line the event will be rendered
+   */
+  lineToRender: number;
 }
