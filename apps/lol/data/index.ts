@@ -6,6 +6,7 @@ import { bewitching } from "./bewitching";
 import { worlds } from "./worlds";
 import { pass } from "./pass";
 import { empyrean } from "./empyrean";
+import { victorious } from "./victorious";
 import { ksante } from "./ksante";
 
 export const data: Record<string, TimelineEvent> = {
@@ -14,6 +15,7 @@ export const data: Record<string, TimelineEvent> = {
   malzahar,
   ksante,
   empyrean,
+  victorious,
   patch,
   skins,
   pass,
