@@ -34,10 +34,10 @@ export const Sidebar = () => {
       <CategoriesSelector
         categories={[
           { value: "skins", label: "Skins" },
-          { value: "changes", label: "Changes" },
-          { value: "champions", label: "Champions" },
+          { value: "changes", label: "Balanceamento" },
+          { value: "champions", label: "Campeões" },
           { value: "pbe", label: "PBE" },
-          { value: "release", label: "Release Notes" },
+          { value: "release", label: "Release" },
           { value: "rumor", label: "Rumor" },
         ]}
         handleCategoryClick={handleChange}

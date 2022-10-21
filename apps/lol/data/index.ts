@@ -15,9 +15,9 @@ export const data: Record<string, TimelineEvent> = {
   malzahar,
   ksante,
   empyrean,
-  victorious,
   patch,
   skins,
+  victorious,
   pass,
   worlds,
 };
