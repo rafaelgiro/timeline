@@ -43,7 +43,7 @@ export const CalendarEventFrame = (props: CalendarEventFrameProps) => {
         <path
           d={frame}
           stroke={theme.color[borderCategory]}
-          strokeWidth="2"
+          strokeWidth="3"
           strokeLinecap="round"
         />
       </CalendarEventFrameContainer>
