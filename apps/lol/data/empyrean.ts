@@ -1,7 +1,7 @@
 export const empyrean: TimelineEvent = {
   backgroundCategory: "pbe",
   borderCategory: "skins",
-  description: "Skins Empíreos",
+  description: "Incendeie a própria realidade com os Empíreos — já no PBE",
   startDate: new Date("2022-10-18T00:00:00.000"),
   endDate: new Date("2022-10-31T00:00:00.000"),
   url: "https://www.youtube.com/watch?v=7Hv7FuK9VKM",
