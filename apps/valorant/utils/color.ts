@@ -6,7 +6,7 @@ export const color: ThemeColors = {
   highlight: "#fe4655",
   skins: "#78f0db",
   changes: "#0efff9",
-  champions: "#ebe8e1",
+  champions: "#FFFFFF",
   pbe: "#FA645E",
   release: "#ffd1b6",
   rumor: "#242333",
