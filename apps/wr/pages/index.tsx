@@ -14,7 +14,7 @@ export default function Web() {
     <ThemeProvider color={color}>
       <Wrapper>
         <Head>
-          <title>5Pots - LoL</title>
+          <title>5Pots - WR</title>
           <meta charSet="utf-8" />
           <meta
             name="viewport"
@@ -22,9 +22,9 @@ export default function Web() {
           />
           <meta
             name="description"
-            content="Calendário com as novidades de League of Legends"
+            content="Calendário com as novidades de Wild Rift"
           />
-          <meta name="theme-color" content="#141529" />
+          <meta name="theme-color" content="#030D12" />
           <link rel="shortcut icon" href="/static/favicon.ico" />
           <meta property="og:image" content="/static/thumb.jpg" />
         </Head>
