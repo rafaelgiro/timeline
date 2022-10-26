@@ -44,7 +44,8 @@ export const GameIconContainer = styled.svg<IconContainerProps>`
     }
 
     .lor-title {
-      stroke: ${({ accentColor }) => accentColor} !important;
+      stroke: ${({ accentColor, isActive }) =>
+        !isActive && accentColor} !important;
     }
   }
 
