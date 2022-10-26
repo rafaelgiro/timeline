@@ -1,7 +1,8 @@
 export const victorious: TimelineEvent = {
   backgroundCategory: "pbe",
   borderCategory: "skins",
-  description: "Sejuani Vitoriosa",
+  description:
+    "Sejuani Vitoriosa virá para o PBE para jogadores ranqueados acima de ouro.",
   startDate: new Date("2022-11-01T00:00:00.000"),
   endDate: new Date("2022-11-14T00:00:00.000"),
   url: "https://lol.garena.com/news/articles/4870",
@@ -11,5 +12,5 @@ export const victorious: TimelineEvent = {
   },
   name: "Sejuani Vitoriosa",
   champions: [{ championId: "Sejuani", name: "Sejuani" }],
-  isFeatured: false,
+  isFeatured: true,
 };

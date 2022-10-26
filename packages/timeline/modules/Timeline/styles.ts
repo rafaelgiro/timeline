@@ -61,6 +61,7 @@ export const CardsContainer = styled.section`
 
     @media ${({ theme }) => theme.screens.lg} {
       margin-right: 1rem;
+      margin-bottom: 0;
     }
   }
 

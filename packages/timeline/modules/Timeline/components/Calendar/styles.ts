@@ -48,7 +48,7 @@ export const CalendarWrapper = styled(ScrollContainer)<CalendarWrapperProps>`
 
   .background {
     grid-column: 1/-1;
-    height: 90%;
+    height: 100%;
     display: flex;
     position: absolute;
     top: 0;

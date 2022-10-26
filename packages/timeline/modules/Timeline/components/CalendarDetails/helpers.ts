@@ -10,5 +10,9 @@ export function getEventDateSpan(startDate: Date, endDate: Date) {
   const startMonth = startDate.getMonth() + 1;
   const endDay = endDate.getDate();
   const endMonth = endDate.getMonth() + 1;
+
+  if (`${startDay}/${startMonth}` === `${endDay}/${endMonth}`)
+    return `${startDay}/${startMonth}`;
+
   return `${startDay}/${startMonth} até ${endDay}/${endMonth}`;
 }
