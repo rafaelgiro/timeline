@@ -11,5 +11,6 @@
     "dev": {
       "cache": false
     }
-  }
+  },
+  "globalDependencies": ["$GAME_NAME"]
 }

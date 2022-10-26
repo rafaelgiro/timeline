@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Tab, TabGroup } from "../../../../components/Tab";
+import { GameSelector } from "../GameSelector";
 import { ScrollButton } from "./ScrollButton";
 import { TimelineHeaderContainer } from "./styles";
 
@@ -8,22 +7,10 @@ import { TimelineHeaderContainer } from "./styles";
  */
 export const TimelineHeader = (props: TimelineHeaderProps) => {
   const { handleScroll } = props;
-  const [selectedTab, setSelectedTab] = useState("normal-calendar");
-
-  function handleTabChange(event: React.SyntheticEvent, newValue: string) {
-    setSelectedTab(newValue);
-  }
 
   return (
     <TimelineHeaderContainer>
-      <TabGroup currentlySelected={selectedTab} onChange={handleTabChange}>
-        <Tab value="normal-calendar" isDisabled>
-          Calendário
-        </Tab>
-        <Tab value="current-patch" isDisabled>
-          Atualização 19.20
-        </Tab>
-      </TabGroup>
+      <GameSelector />
       <div>
         <ScrollButton direction="backward" onClick={handleScroll} />
         <ScrollButton direction="forward" onClick={handleScroll} />
