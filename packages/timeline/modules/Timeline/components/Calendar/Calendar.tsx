@@ -1,8 +1,10 @@
 import { forwardRef, useMemo } from "react";
+import { Typography } from "../../../../components/Typography";
 
 import { CalendarEvent } from "../CalendarEvent";
 import { CalendarSimpleEvent } from "../CalendarSimpleEvent";
 import { Day } from "./Day";
+import { EmptyCalendar } from "./EmptyCalendar";
 
 import { getDatesBetween } from "./helpers";
 import { CalendarWrapper } from "./styles";
@@ -26,6 +28,8 @@ export const Calendar = forwardRef<HTMLDivElement, CalendarProps>(
     function handleCardClick(cat: string) {
       console.log(cat);
     }
+
+    if (!categories.length) return <EmptyCalendar />;
 
     return (
       <CalendarWrapper daysLength={days.length} innerRef={ref}>

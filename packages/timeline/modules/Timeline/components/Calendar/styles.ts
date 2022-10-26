@@ -57,6 +57,25 @@ export const CalendarWrapper = styled(ScrollContainer)<CalendarWrapperProps>`
   }
 `;
 
+export const EmptyContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  height: 100%;
+  color: ${({ theme }) => theme.color.fontPrimary};
+  opacity: 0.3;
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  a {
+    color: ${({ theme }) => theme.color.highlight} !important;
+  }
+`;
+
 interface DayContainerProps {
   isHighlighted?: boolean;
 }
