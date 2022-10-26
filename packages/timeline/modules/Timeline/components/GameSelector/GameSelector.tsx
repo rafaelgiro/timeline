@@ -11,11 +11,11 @@ export const GameSelector = () => {
           <LoLIcon isActive={currentGame === "lol"} />
         </a>
       </div>
-      <div>
+      {/* <div>
         <a href="https://wr.5pots.com">
           <WRIcon isActive={currentGame === "wr"} />
         </a>
-      </div>
+      </div> */}
       <div>
         <a href="https://val.5pots.com">
           <ValorantIcon isActive={currentGame === "val"} />
