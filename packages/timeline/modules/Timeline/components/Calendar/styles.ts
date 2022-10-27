@@ -66,6 +66,7 @@ export const EmptyContainer = styled.div`
   height: 100%;
   color: ${({ theme }) => theme.color.fontPrimary};
   opacity: 0.3;
+  padding: 2rem;
 
   h2 {
     font-size: 2rem;
