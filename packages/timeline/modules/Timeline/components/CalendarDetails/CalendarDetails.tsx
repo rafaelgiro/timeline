@@ -13,6 +13,7 @@ export const CalendarDetails = (props: CalendarDetailsProps) => {
     description,
     champions,
     borderCategory,
+    author,
   } = props;
 
   return (
@@ -47,7 +48,16 @@ export const CalendarDetails = (props: CalendarDetailsProps) => {
         </div>
       )}
       <div className="view-more">
-        <Typography variant="subtitle">
+        {author ? (
+          <Typography variant="subtitle">
+            Indicado por:
+            <br />
+            <strong>{author}</strong>
+          </Typography>
+        ) : (
+          <div />
+        )}
+        <Typography variant="subtitle" className="link">
           <strong>Clique para ir ao link original</strong>
         </Typography>
       </div>

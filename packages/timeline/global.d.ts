@@ -67,6 +67,10 @@ interface TimelineEvent {
    * Visual variant of the event
    */
   variant?: "default" | "dashed" | "dotted";
+  /**
+   * Who created or referenced the event
+   */
+  author?: string;
 }
 
 interface ThemeColors {

@@ -86,11 +86,13 @@ export const CalendarDetailsContainer = styled.div<{
   }
 
   .view-more {
+    display: flex;
+    justify-content: space-between;
     margin-top: 0.25rem;
-    text-align: right;
 
-    span {
+    .link {
       color: ${({ borderCategory, theme }) => theme.color[borderCategory]};
+      text-align: right;
     }
   }
 `;

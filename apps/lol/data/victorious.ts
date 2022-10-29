@@ -13,4 +13,5 @@ export const victorious: TimelineEvent = {
   name: "Sejuani Vitoriosa",
   champions: [{ championId: "Sejuani", name: "Sejuani" }],
   isFeatured: true,
+  author: "@datFranky",
 };
