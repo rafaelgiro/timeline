@@ -19,5 +19,5 @@ export const empyrean: TimelineEvent = {
     { championId: "Jhin", name: "Jhin" },
     { championId: "Vex", name: "Vex" },
   ],
-  isFeatured: true,
+  isFeatured: false,
 };
