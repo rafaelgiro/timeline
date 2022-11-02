@@ -15,12 +15,13 @@ export const CategoriesSelectorContainer = styled.section`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 1rem;
+    margin: 1rem 0;
 
     @media ${({ theme }) => theme.screens.lg} {
       flex-direction: column;
       justify-content: flex-start;
       margin-top: 1.5rem;
+      margin-bottom: 0;
     }
   }
 
@@ -33,13 +34,6 @@ export const CategoriesSelectorContainer = styled.section`
       &:not(:first-of-type) {
         margin-top: 0.75rem;
       }
-    }
-  }
-
-  .time-window-selector {
-    margin-top: 0.5rem;
-    @media ${({ theme }) => theme.screens.lg} {
-      display: none;
     }
   }
 `;

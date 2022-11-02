@@ -23,18 +23,6 @@ export const CategoriesSelector = (props: CategoriesSelectorProps) => {
           />
         ))}
       </div>
-      <TabGroup
-        currentlySelected="normal-calendar"
-        onChange={console.log}
-        className="time-window-selector"
-      >
-        <Tab value="normal-calendar" isDisabled>
-          Calendário
-        </Tab>
-        <Tab value="current-patch" isDisabled>
-          Atualização 19.20
-        </Tab>
-      </TabGroup>
     </CategoriesSelectorContainer>
   );
 };
