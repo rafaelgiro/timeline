@@ -1,9 +1,9 @@
 export const patch: TimelineEvent = {
   backgroundCategory: "release",
   borderCategory: "release",
-  endDate: new Date("2022-11-02T00:00:00.000"),
-  startDate: new Date("2022-11-02T00:00:00.000"),
-  name: "12.21",
+  endDate: new Date("2022-11-16T00:00:00.000"),
+  startDate: new Date("2022-11-16T00:00:00.000"),
+  name: "12.22",
   image: {
     url: "https://assets.5pots.com/file/cincopots/timeline/changes.jpg",
     alt: "Concept Art do vendedor do lado vermelho",

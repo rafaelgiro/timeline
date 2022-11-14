@@ -4,7 +4,7 @@ export const groove: TimelineEvent = {
   description:
     "Tem um sonzão legal e um climão maneiro chegando só no sapatinho ao PBE! 🎶",
   startDate: new Date("2022-11-01T00:00:00.000"),
-  endDate: new Date("2022-11-15T00:00:00.000"),
+  endDate: new Date("2022-11-14T00:00:00.000"),
   url: "https://twitter.com/LoLegendsBR/status/1587459461144227840",
   image: {
     url: "https://assets.5pots.com/file/cincopots/timeline/groove.jpg",
