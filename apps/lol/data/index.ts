@@ -1,7 +1,6 @@
 import { changes } from "./changes";
 import { skins } from "./skins";
 import { patch } from "./patch";
-import { worlds } from "./worlds";
 import { pass } from "./pass";
 import { empyrean } from "./empyrean";
 import { victorious } from "./victorious";
