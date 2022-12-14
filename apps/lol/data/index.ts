@@ -2,18 +2,13 @@ import { changes } from "./changes";
 import { skins } from "./skins";
 import { patch } from "./patch";
 import { pass } from "./pass";
-import { empyrean } from "./empyrean";
-import { victorious } from "./victorious";
-import { groove } from "./groove";
-import { winter } from "./winter";
+import { mythmaker } from "./mythmaker";
+import { lunar } from "./lunar";
 
 export const data: Record<string, TimelineEvent> = {
-  changes,
-  empyrean,
-  victorious,
-  groove,
+  lunar,
+  mythmaker,
   patch,
   skins,
-  winter,
   pass,
 };

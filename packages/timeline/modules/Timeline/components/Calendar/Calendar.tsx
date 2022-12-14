@@ -1,5 +1,4 @@
-import { forwardRef, useMemo } from "react";
-import { Typography } from "../../../../components/Typography";
+import { forwardRef, useEffect, useMemo, useState } from "react";
 
 import { CalendarEvent } from "../CalendarEvent";
 import { CalendarSimpleEvent } from "../CalendarSimpleEvent";
@@ -16,6 +15,7 @@ import { CalendarWrapper } from "./styles";
 export const Calendar = forwardRef<HTMLDivElement, CalendarProps>(
   (props, ref) => {
     const { from, to, data } = props;
+    const [today, setToday] = useState<string>();
     const days = useMemo(() => getDatesBetween(from, to), [from, to]);
     const allEndDates = useMemo(
       () => Object.values(data).map((event) => event.endDate),
@@ -29,14 +29,17 @@ export const Calendar = forwardRef<HTMLDivElement, CalendarProps>(
       console.log(cat);
     }
 
+    useEffect(() => {
+      setToday(new Date().toLocaleDateString());
+    }, []);
+
     if (!categories.length) return <EmptyCalendar />;
 
     return (
       <CalendarWrapper daysLength={days.length} innerRef={ref}>
         <div className="background">
           {days.map((day) => {
-            const isToday =
-              day.toLocaleDateString() === new Date().toLocaleDateString();
+            const isToday = day.toLocaleDateString() === today;
 
             return (
               <Day key={day.toISOString()} day={day} isHighlighted={isToday} />
